@@ -19,4 +19,4 @@ O aplicativo Nota Fiscal Cidadã foi criado durante o evento Hackathon Insano, q
 * http://www.sefaz.al.gov.br/noticia/itemlist/tag/Hackathon%20Insano
 * http://www.cadaminuto.com.br/noticia/308592/2017/08/18/estrategia-e-dinamismo-marcam-primeiro-dia-de-hackathon-insano-da-sefaz
 * http://www.revistati.com.br/rnti/noticias/noticia/hackathon-insano-alagoas-avanca-no-desenvolvimento-de-novas-tecnologias
-* https://ufal.br/ufal/noticias/2017/8/ufal-se-destaca-em-concurso-de-aplicativos-da-secretaria-da-fazenda/ganhadores-do-hackathon-insano-da-sefaz-al.jpg/view
+* https://ufal.br/ufal/noticias/2017/8/ufal-se-destaca-em-concurso-de-aplicativos-da-secretaria-da-fazenda
