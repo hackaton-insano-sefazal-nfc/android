@@ -1,4 +1,4 @@
-# Nota Fiscal Cidadã - Equipe Iceberg
+# Nota Fiscal Cidadã - Iceberg Team
 
 [Versão em Português](https://github.com/hackaton-insano-sefazal-nfc/android/blob/master/README_pt-BR.md)
 
