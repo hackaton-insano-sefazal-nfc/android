@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="pt">
+    <string name="app_name">Nota Fiscal Cidadã</string>
+    <string name="wait_a_momment">Aguarde um momento por favor…</string>
+    <string name="report">Denunciar</string>
+
+    <!-- Auth -->
+    <string name="authenticate">Autenticar</string>
+    <string name="message_authorize_app">Entre no site\n%s\ne autorize o app\nNota Fiscal Cidadã.</string>
+    <string name="update">Atualizar</string>
+    <string name="hint_cpf">Digite seu CPF</string>
+    <string name="error_message_update_authentication">Erro ao atualizer status da autenticação</string>
+    <string name="report_title">Denuncie</string>
+    <string name="report_type">Qual o tipo de Denúncia?</string>
+    <string name="value">Valor</string>
+    <string name="unsigned">Não Cadastrado</string>
+    <string name="issuer_cnpj">Emitente CNPJ</string>
+    <string name="receiver_cnpj_cpf">Destinatário CPF/CNPJ</string>
+    <string name="money">R$</string>
+    <string name="report_description">Detalhamento (max 500 caracteres)</string>
+    <string name="confirm">Confirmar</string>
+    <string name="confirmation_text">Sua denuncia está registrada, iremos avaliar e tomaremos as devidas  providências, obrigado por contribuir!</string>
+    <string name="ok">Ok</string>
+    <string name="your_reports_title">Suas denúncias</string>
+    <string name="new_report">Fazer nova denúncia</string>
+    <string name="realized">Realizada</string>
+    <string name="no_account_or_doubt">Sem conta ou dúvida?</string>
+
+    <!-- Main -->
+    <string name="tickets_acquired">Bilhetes Adquiridos: %d</string>
+    <string name="balance">Saldo</string>
+    <string name="share">Compartilhar</string>
+    <string name="next_raffle">Próximo Sorteio</string>
+    <string name="last_raffle">Ultímo Sorteio</string>
+    <string name="quantity_of_cuopons">Quantidade de Cupons</string>
+    <string name="denounce">Denuncie</string>
+    <string name="your_invoice">Sua nota fiscal</string>
+    <string name="ranking">Ranking</string>
+    <string name="share_your_note">Compartilhe\nsua nota</string>
+    <string name="title_dialog_raffle">Sorteio - %d</string>
+    <string name="invoices">Notas Fiscais</string>
+    <string name="raffles">Sorteios</string>
+    <string name="about_the_app">Sobre o Aplicativo</string>
+    <string name="open_source">Open Source</string>
+    <string name="exit">Sair</string>
+    <string name="message_share_app">Exerça sua cidadania fiscal e ainda ajude entidades sociais, baixe o aplicativo Nota Fiscal Cidadã: https://play.google.com/store/apps/details?id=br.com.danielsan.notafiscalcidada</string>
+    <string name="error_message_share_app">Infelizmente parece que você não tem como compartilharo aplicativo.</string>
+
+    <!-- QrCode -->
+    <string name="permission_camera_rationale">Pemissão para acessar a câmera é necessária para escanear sua nota.</string>
+    <string name="permission_camera_denied">Permissão para acessar a câmera negada. Por favor, considere concedê-lo para acessar a câmera!</string>
+    <string name="permission_camera_neverask">A permissão da câmera foi negada com nunca perguntar de novo.</string>
+    <string name="allow">Permitir</string>
+    <string name="deny">Negar</string>
+    <string name="message_make_sure_your_invoice_is_recorded">Confira se sua nota fiscal\nfoi registrada</string>
+    <string name="message_point_the_camera">Aponte a câmera do seu dispositivo para o QRCode da sua nota fiscal</string>
+
+    <!-- IlhaPush -->
+    <string name="message_ilha_push_floating_chats">Por favor, me dê permissão para abrir conversas flutuantes!</string>
+    <string name="about_text">O Aplicativo Nota Fiscal Cidadã foi criado durante o evento Hackathon, realizado pela Sefaz tendo por objetivo o desenvolvimento de soluções de software voltados para dispositivos móveis, no âmbito das atribuições da Secretaria de Estado da Fazenda. A equipe vencedora, Iceberg criou em 72h o aplicativo participa que possui funcionalidades da NFC que antes só podiam ser acessadas de forma presencial. A equipe:</string>
+
+    <!-- About -->
+    <string name="luiza" templateMergeStrategy="preserve" translatable="false">Luiza Mesquita</string>
+    <string name="luiza_job">Designer UI/UX</string>
+    <string name="luiza_school">Graduada em Design Gráfico pelo Centro Universitário Maurício de Nassau</string>
+    <string name="luiza_link" templateMergeStrategy="preserve" translatable="false">https://www.linkedin.com/in/luiza-mesquita-2638b0122/</string>
+    <string name="lucas" templateMergeStrategy="preserve" translatable="false">Lucas Barros</string>
+    <string name="lucas_job">Programador Android</string>
+    <string name="lucas_school">Bacharel em Ciências da Computação pela Universidade Federal de Alagoas</string>
+    <string name="lucas_link" templateMergeStrategy="preserve" translatable="false">https://www.linkedin.com/in/lucasmbarros/</string>
+    <string name="victor" templateMergeStrategy="preserve" translatable="false">Antônio Victor</string>
+    <string name="victor_job">Programador Backend</string>
+    <string name="victor_school">Técnico em Informática</string>
+    <string name="victor_link" templateMergeStrategy="preserve" translatable="false">https://www.linkedin.com/in/victor-ferreira-2a7885132/</string>
+    <string name="daniel" templateMergeStrategy="preserve" translatable="false">Daniel San</string>
+    <string name="daniel_job">Programador Android</string>
+    <string name="daniel_school">Graduando em Engenharia de Computação pela Universidade Federal de Alagoas</string>
+    <string name="daniel_link" templateMergeStrategy="preserve" translatable="false">http://www.danielsan.com.br</string>
+    <string name="about_title">Sobre o Aplicativo</string>
+    <string name="app_on_github">Aplicativo no Github</string>
+    <string name="main_menu">Menu Principal</string>
+
+    <!-- About Ranking -->
+    <string name="about_ranking_title">Sobre o Ranking</string>
+    <string name="about_ranking_text">A cada denúncia realizada você ganha 10 pontos! Futuramente seus pontos poderão ser revertidos em benefícios para você!</string>
+    <string name="logout">Sair</string>
+
+    <!--Ranking -->
+    <string name="activity_ranking_title">Ranking</string>
+
+    <!-- Raffle -->
+    <string name="your_winning_tickets">Seus bilhetes contemplados</string>
+    <string name="your_tickets">Seus bilhetes</string>
+    <string name="tickets">Bilhetes</string>
+    <string name="winning_tickets">Bilhetes Contemplados</string>
+    <string name="message_without_ticket_for_a_raffle">Você ainda não tem nenhum bilhete para concorrer a este sorteio. Compre e infome seu CPF para conseguir bilhetes para este sorteio.</string>
+    <string name="message_without_winning_ticket_for_a_raffle">Infelizmente você não tem nenhum bilhete contemplado. Continue comprando e informando seu CPF para aumentar suas chances de ser contemplado.</string>
+    <string name="title_dialog_your_tickets">Você tem os bilhetes de Nº:</string>
+
+    <!-- Adopt -->
+    <string name="title_share_your_note">Compartilhe sua nota</string>
+    <string name="confirmation">Confirmação</string>
+    <string name="message_adopt_confirmation" formatted="false">Você tem certeza que deseja doar suas notas para a instituição %s que tem o CNPJ %s?</string>
+    <string name="message_adopt_confirmed">Sua doação foi realizada com sucesso.\nObrigado por contribuir.</string>
+
+    <!-- Invoices -->
+    <string name="filter">Filtro</string>
+    <string name="value_and_credit" formatted="false">Valor: %s - Créditos: %s</string>
+    <string name="semester_of_year" formatted="false">%dº semeestre de %d</string>
+
+    <!-- Ranking -->
+    <string name="placed">%dº Colocado</string>
+    <string name="you_placed">%dº (Você)</string>
+    <string name="placing">Colocação</string>
+    <string name="punctiation">Pontuação</string>
+
+</resources>

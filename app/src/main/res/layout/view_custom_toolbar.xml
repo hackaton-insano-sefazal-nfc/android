@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/RippleButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_arrow_back_curious_blue_24dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/curious_blue"
+            android:textSize="22sp"
+            app:fontFamily="@font/avenir_roman"
+            tools:text="@string/report_title" />
+
+        <ImageButton
+            android:id="@+id/action"
+            style="@style/RippleButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone"
+            tools:src="@drawable/ic_action_information"/>
+
+    </FrameLayout>
+
+</layout>

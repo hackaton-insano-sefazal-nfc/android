@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:endColor="@color/curious_blue"
+                android:startColor="@color/deep_sky_blue" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/img_auth_bg_mask" />
+    </item>
+
+</layer-list>

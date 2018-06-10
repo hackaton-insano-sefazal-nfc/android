@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="br.com.danielsan.notafiscalcidada.features.report.SignUpReportPresenter" />
+
+        <variable
+            name="reportViewModel"
+            type="br.com.danielsan.notafiscalcidada.features.report.ReportViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_custom_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/report_type"
+                    android:textColor="@color/curious_blue"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/avenir_roman" />
+
+                <RadioGroup
+                    android:id="@+id/report_type_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_blue_border"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/value"
+                        android:textColor="@color/curious_blue"
+                        android:theme="@style/BlueRadioButton"
+                        app:fontFamily="@font/avenir_light" />
+
+                    <Space
+                        android:layout_width="24dp"
+                        android:layout_height="8dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_unsigned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unsigned"
+                        android:textColor="@color/curious_blue"
+                        android:theme="@style/BlueRadioButton"
+                        app:fontFamily="@font/avenir_light" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/curious_blue" />
+
+                <EditText
+                    android:id="@+id/issuer_cnpj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/issuer_cnpj"
+                    android:inputType="number"
+                    android:text="@={reportViewModel.cnpjIssuer}"
+                    android:textColor="@color/curious_blue"
+                    android:textColorHint="@color/curious_blue"
+                    android:theme="@style/BlueEditText"
+                    app:fontFamily="@font/avenir_light"
+                    app:mask="@{`##.###.###/####-##`}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/curious_blue" />
+
+                <EditText
+                    android:id="@+id/edit_cpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/receiver_cnpj_cpf"
+                    android:inputType="number"
+                    android:text="@={reportViewModel.cnpjOrCpf}"
+                    android:textColor="@color/curious_blue"
+                    android:textColorHint="@color/curious_blue"
+                    android:theme="@style/BlueEditText"
+                    app:fontFamily="@font/avenir_light" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/curious_blue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/money"
+                        android:textColor="@color/curious_blue"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/avenir_light" />
+
+                    <EditText
+                        android:id="@+id/edit_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:text="@={reportViewModel.value}"
+                        android:textColor="@color/curious_blue"
+                        android:textColorHint="@color/curious_blue"
+                        android:theme="@style/BlueEditText"
+                        app:fontFamily="@font/avenir_light"
+                        tools:text="123.90" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/curious_blue" />
+
+                    <TextView
+                        android:id="@+id/edit_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_calendar_blue_24dp"
+                        android:drawableStart="@drawable/ic_calendar_blue_24dp"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:text="@{reportViewModel.dateOfIssue}"
+                        android:textColor="@color/curious_blue"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/avenir_light"
+                        tools:text="08/03/1989" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/curious_blue" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/shape_blue_border"
+                    android:gravity="top"
+                    android:hint="@string/report_description"
+                    android:maxLength="500"
+                    android:padding="16dp"
+                    android:text="@={reportViewModel.reportText}"
+                    android:textColor="@color/curious_blue"
+                    android:textColorHint="@color/curious_blue"
+                    android:textSize="14sp"
+                    android:theme="@style/BlueEditText"
+                    app:fontFamily="@font/avenir_light" />
+
+                <Button
+                    android:id="@+id/confirm"
+                    style="@style/OutlineBlueButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="56dp"
+                    android:layout_marginTop="32dp"
+                    android:onClick="@{() -> presenter.onClickReport(reportViewModel.getReport())}"
+                    android:text="@string/confirm"
+                    app:fontFamily="@font/avenir_roman" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

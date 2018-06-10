@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_raffle"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/date"
+            android:layout_toStartOf="@+id/date"
+            android:textColor="@color/curious_blue"
+            android:textSize="16sp"
+            app:fontFamily="@font/avenir_roman"
+            tools:text="@string/luiza" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/curious_blue"
+            app:fontFamily="@font/avenir_light"
+            tools:text="--/--/--" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:textColor="@color/curious_blue"
+            app:fontFamily="@font/avenir_light"
+            tools:text="@string/luiza_school" />
+
+    </RelativeLayout>
+
+</layout>

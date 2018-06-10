@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="white_2">#FAFAFA</color>
+    <color name="curious_blue">#0077B9</color>
+    <color name="lochmara">#055C8C</color>
+    <color name="medium_slate_blue">#2B48C8</color>
+    <color name="deep_sky_blue">#00AFDE</color>
+    <color name="deep_sky_blue_alpha_70">#7000AFDE</color>
+    <color name="gainsboro">#D8D8D8</color>
+    <color name="dark_gray">#B0B0B0</color>
+    <color name="medium_aquamarine">#74DEC0</color>
+
+    <drawable name="control_highlight">#1F000000</drawable>
+</resources>

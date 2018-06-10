@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LoginTheme" parent="AppThemeNoActionBar">
+        <item name="colorPrimary">@color/curious_blue</item>
+        <item name="colorPrimaryDark">@color/curious_blue</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

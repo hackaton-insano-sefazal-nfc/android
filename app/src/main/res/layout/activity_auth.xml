@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="update"
+            type="boolean" />
+
+        <variable
+            name="activity"
+            type="br.com.danielsan.notafiscalcidada.features.authentication.AuthActivity" />
+
+        <variable
+            name="presenter"
+            type="br.com.danielsan.notafiscalcidada.features.authentication.AuthPresenter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_login"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.6" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:src="@drawable/lg_nfc" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:fontFamily="@font/avenir_roman"
+            app:visible="@{update}"
+            tools:text="@string/message_authorize_app" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            app:hintTextAppearance="@style/White"
+            app:visible="@{!update}">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_cpf"
+                android:imeActionId="6"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:theme="@style/WhiteEditText"
+                app:fontFamily="@font/avenir_light"
+                app:mask="@{`###.###.###-##`}"
+                app:validateType="@{`cpf`}"
+                app:validateTypeAutoDismiss="@{true}" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shape_outline_white"
+            android:onClick="@{update ? activity.onClickUpdate : activity.onClickAuthenticate}"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:text="@{update ? @string/update : @string/authenticate}"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:fontFamily="@font/avenir_roman"
+            tools:text="@string/authenticate" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.4" />
+
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:onClick="@{v -> presenter.onClickNoAccountOrDoubt()}"
+            android:padding="4dp"
+            android:text="@string/no_account_or_doubt"
+            android:textColor="@color/medium_slate_blue"
+            app:fontFamily="@font/avenir_roman"
+            app:visible="@{!update}" />
+
+    </LinearLayout>
+
+</layout>

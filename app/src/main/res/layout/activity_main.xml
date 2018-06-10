@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="br.com.danielsan.notafiscalcidada.features.main.MainPresenter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/curious_blue"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/curious_blue">
+
+                    <ImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_face_white_36dp"
+                        app:layout_constraintEnd_toStartOf="@+id/balance"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Usuário"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/avenir_light"
+                        app:layout_constraintEnd_toEndOf="@+id/user_image"
+                        app:layout_constraintStart_toStartOf="@+id/user_image"
+                        app:layout_constraintTop_toBottomOf="@+id/user_image" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintBottom_toBottomOf="@+id/user_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/user_image"
+                        app:layout_constraintTop_toTopOf="@+id/user_image"
+                        tools:text="R$ 32,00" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/balance"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/balance"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/avenir_light"
+                        app:layout_constraintStart_toStartOf="@+id/balance"
+                        app:layout_constraintTop_toBottomOf="@+id/balance" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+                    <TextView
+                        android:id="@+id/tickets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_next_raffle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/raffle_date"
+                        tools:text="@string/tickets_acquired" />
+
+                    <TextView
+                        android:id="@+id/raffle_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:onClick="@{v -> presenter.onClickNextRaffle()}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider1"
+                        tools:text="20/09/2017" />
+
+                    <TextView
+                        android:id="@+id/text_view_next_raffle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:onClick="@{v -> presenter.onClickNextRaffle()}"
+                        android:text="@string/next_raffle"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/raffle_date" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_next_raffle" />
+
+                    <TextView
+                        android:id="@+id/text_view_quantity_of_coupons"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/quantity_of_cuopons"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/tickets_circles"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_quantity_of_coupons"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_quantity_of_coupons"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_quantity_of_coupons" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="246dp"
+                    tools:layout_height="500dp">
+
+                    <Button
+                        android:id="@+id/denounce"
+                        style="@style/MainButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:drawableTop="@drawable/ic_denounce"
+                        android:onClick="@{v -> presenter.onClickDenounce()}"
+                        android:text="@string/denounce"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintBottom_toTopOf="@+id/ranking"
+                        app:layout_constraintEnd_toStartOf="@+id/your_ticket"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/your_ticket"
+                        style="@style/MainButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="24dp"
+                        android:drawableTop="@drawable/ic_qrcode"
+                        android:onClick="@{v -> presenter.onClickYourTicket()}"
+                        android:text="@string/your_invoice"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintBottom_toTopOf="@+id/donation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/denounce"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/ranking"
+                        style="@style/MainButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:drawableTop="@drawable/ic_donation"
+                        android:onClick="@{v -> presenter.onClickDonation()}"
+                        android:text="@string/share_your_note"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/donation"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/denounce" />
+
+                    <Button
+                        android:id="@+id/donation"
+                        style="@style/MainButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:drawableTop="@drawable/ic_ranking"
+                        android:onClick="@{v -> presenter.onClickRanking()}"
+                        android:text="@string/ranking"
+                        app:fontFamily="@font/avenir_roman"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/ranking"
+                        app:layout_constraintTop_toBottomOf="@+id/your_ticket" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:itemIconTint="@color/selector_drawer"
+                app:menu="@menu/drawer" />
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </LinearLayout>
+
+</layout>

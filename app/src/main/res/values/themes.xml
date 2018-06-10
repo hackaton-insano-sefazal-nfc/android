@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/curious_blue</item>
+        <item name="colorPrimaryDark">@color/lochmara</item>
+        <item name="colorAccent">@color/curious_blue</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/curious_blue</item>
+        <item name="colorPrimaryDark">@color/lochmara</item>
+        <item name="colorAccent">@color/curious_blue</item>
+        <item name="android:windowBackground">@color/white_2</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/curious_blue</item>
+        <item name="colorPrimaryDark">@color/lochmara</item>
+        <item name="colorAccent">@color/curious_blue</item>
+        <item name="android:windowBackground">@color/white_2</item>
+    </style>
+
+    <style name="LoginTheme" parent="AppThemeNoActionBar">
+        <item name="colorPrimary">@color/curious_blue</item>
+        <item name="colorPrimaryDark">@color/lochmara</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/white_2</item>
+    </style>
+
+</resources>

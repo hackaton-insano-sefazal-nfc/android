@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="image"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="jobTitle"
+            type="String" />
+
+        <variable
+            name="schooling"
+            type="String" />
+
+        <variable
+            name="link"
+            type="String" />
+
+        <variable
+            name="activity"
+            type="br.com.danielsan.notafiscalcidada.features.about.AboutActivity" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{v -> activity.onClickAuthor(link)}"
+        app:cardUseCompatPadding="true"
+        app:contentPaddingBottom="8dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                app:circleSrc="@{image}"
+                tools:src="@drawable/ic_fake_profile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{name}"
+                    android:textColor="@color/curious_blue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/avenir_roman"
+                    tools:text="@string/luiza" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{jobTitle}"
+                    android:textColor="@color/curious_blue"
+                    app:fontFamily="@font/avenir_light"
+                    tools:text="@string/luiza_job" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@{schooling}"
+                    android:textColor="@color/curious_blue"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/avenir_light"
+                    tools:text="@string/luiza_school" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

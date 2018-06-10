@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_raffle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/curious_blue"
+            app:fontFamily="@font/avenir_roman"
+            tools:text="Mussum Ipsum, cacilds vidis litro abertis." />
+
+        <TextView
+            android:id="@+id/cnpj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/curious_blue"
+            app:fontFamily="@font/avenir_light"
+            tools:text="68.751.405/6706-84" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RadioButton
+            android:id="@+id/month_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Mês"
+            android:textColor="@color/curious_blue"
+            app:fontFamily="@font/avenir_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="@{monthRadio.checked ? View.VISIBLE : View.GONE}">
+
+            <NumberPicker
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants" />
+
+            <NumberPicker
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants" />
+
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/semester_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@={!monthRadio.checked}"
+            android:text="Semestres"
+            android:textColor="@color/curious_blue"
+            app:fontFamily="@font/avenir_light" />
+
+        <NumberPicker
+            android:id="@+id/semester"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:descendantFocusability="blocksDescendants"
+            android:visibility="@{semesterRadio.checked ? View.VISIBLE : View.GONE}" />
+
+    </LinearLayout>
+
+</layout>

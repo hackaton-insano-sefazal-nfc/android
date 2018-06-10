@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="br.com.danielsan.notafiscalcidada.features.about.AboutActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_custom_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:text="@string/about_text"
+                    android:textColor="@color/curious_blue"
+                    app:fontFamily="@font/avenir_light" />
+
+                <include
+                    layout="@layout/item_about"
+                    app:activity="@{activity}"
+                    app:image="@{@drawable/img_luiza}"
+                    app:jobTitle="@{@string/luiza_job}"
+                    app:link="@{@string/luiza_link}"
+                    app:name="@{@string/luiza}"
+                    app:schooling="@{@string/luiza_school}" />
+
+                <include
+                    layout="@layout/item_about"
+                    app:activity="@{activity}"
+                    app:image="@{@drawable/img_lucas}"
+                    app:jobTitle="@{@string/lucas_job}"
+                    app:link="@{@string/lucas_link}"
+                    app:name="@{@string/lucas}"
+                    app:schooling="@{@string/lucas_school}" />
+
+                <include
+                    layout="@layout/item_about"
+                    app:activity="@{activity}"
+                    app:image="@{@drawable/img_victor}"
+                    app:jobTitle="@{@string/victor_job}"
+                    app:link="@{@string/victor_link}"
+                    app:name="@{@string/victor}"
+                    app:schooling="@{@string/victor_school}" />
+
+                <include
+                    layout="@layout/item_about"
+                    app:activity="@{activity}"
+                    app:image="@{@drawable/img_daniel}"
+                    app:jobTitle="@{@string/daniel_job}"
+                    app:link="@{@string/daniel_link}"
+                    app:name="@{@string/daniel}"
+                    app:schooling="@{@string/daniel_school}" />
+
+                <Button
+                    android:id="@+id/app_on_github"
+                    style="@style/OutlineBlueButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="56dp"
+                    android:layout_marginTop="32dp"
+                    android:drawableLeft="@drawable/ic_code_curious_blue_24dp"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_code_curious_blue_24dp"
+                    android:paddingLeft="36dp"
+                    android:paddingRight="36dp"
+                    android:text="@string/app_on_github"
+                    app:fontFamily="@font/avenir_roman" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="br.com.danielsan.notafiscalcidada.features.report.list.ReportsPresenter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_2"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_custom_toolbar" />
+
+        <Button
+            android:id="@+id/new_report"
+            style="@style/OutlineBlueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="48dp"
+            android:layout_marginTop="32dp"
+            android:onClick="@{v -> presenter.onClickCreateReport()}"
+            android:text="@string/new_report"
+            app:fontFamily="@font/avenir_roman" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/curious_blue" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/curious_blue" />
+
+    </LinearLayout>
+
+</layout>
